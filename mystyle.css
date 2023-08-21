@@ -1,0 +1,243 @@
+.sec1,.sec2,.sec3,.sec4.sec5,.sec7{
+    width: 1275px;
+}
+.sec1{
+background-color: #F0F8FF;
+background-size: cover;
+display: flex;
+height: 425px;
+margin: 0px;
+}
+body {
+    margin: 0; /* Reset default body margin */
+}
+.sec1_a{
+    padding: 10%;
+    margin-top: 0px;
+    display: inline;
+}
+.sec1_b{
+    width: 100px;
+    height: 100px;
+}
+#sec1_a_1{
+    margin-top: 0px;
+    display: flex;
+    color: #FA8072;
+}
+#sec1_a_2{
+    color: midnightblue;
+    font-weight: bolder;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.02rem;
+}
+#sec1_a_3{
+    display: flex;
+}
+.exbtn{
+    height: 35px;
+    width: 150px; 
+    background-color: 	#FA8072;
+    border-radius: 3.5px;
+    color: #F0F8FF;
+    border: 2px solid #FA8072;
+}
+.projbtn{
+    height: 35px;
+    width: 150px; 
+    background-color: 	#1F75FE;
+    border-radius: 3.5px;
+    color: #F0F8FF;
+    border: 2px solid #1F75FE;
+}
+.playbtn{
+    height: 60px;
+    background-color: 	#FA8072;
+    color: #F0F8FF;
+    border-radius: 85px;
+    width: 60px;
+    border: 10px solid	#FFE4E1 ;
+}
+.sec2,.sec4{
+    height: 585px;
+    
+    display: flex;
+}
+.sec2_b{
+    padding-left: 40px;
+}
+#seoline{
+    color: #1F75FE;
+    margin-top: -15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.myfonts{
+    color: #1F75FE;
+    font-size: 50px;
+}
+.sec3{
+    height: 484px;
+}
+#heading_sec3{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#sec4_a{
+    padding: 40px;
+}
+.sec4_b{
+    padding-left: 48px;
+}
+.sec5,.sec6{
+    height: max-content;
+   /* border: 2px solid red;*/
+    margin: auto;
+    background-color: floralwhite;
+}
+/*section 5*/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  section {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    background-color: #f9f9f9;
+  }
+  section.active {
+    display: block;
+  }
+  .sec5_heading{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    background-color: white;
+  }
+  .sec5_heading:hover{
+    text-decoration: underline;
+}
+.exbtn:active,.projbtn:active,.playbtn:active{
+    transform: translate(7.5px);
+}
+.exbtn:hover,.projbtn:hover,.playbtn:hover{
+    background-color: #ccc;
+    color: black;
+}
+/*card*/
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 9px;
+    background-color: lightgray;
+    height: max-content;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  .sec6{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+  }
+  
+  /*pricing*/
+  /* Create three columns of equal width */
+.columns {
+    float: left;
+    width: 33.3%;
+    padding: 8px;
+  }
+  
+  /* Style the list */
+  .price {
+    list-style-type: none;
+    border: 1px solid white;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 300px;
+    
+  }
+  
+  /* Add shadows on hover */
+  .price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+  }
+  
+  /* Pricing header */
+  .price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+  }
+  
+  /* List items */
+  .price li {
+    border-bottom: 1px solid white;
+    padding: 20px;
+    text-align: center;
+
+  }
+  
+  /* Grey list item */
+  .price .grey {
+    background-color: white;
+    font-size: 20px;
+  }
+
+  /* Change the width of the three columns to 100%
+  (to stack horizontally on small screens) */
+  @media only screen and (max-width: 600px) {
+    .columns {
+      width: 100%;
+    }
+  }
+  .grey{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  #pricebox{
+    border-radius: 10px;
+  }
+  .check{
+    color: green;
+  }
+  .nocheck{
+    color: red;
+  }
+  .sec7{
+    display: flex;
+    padding-top: 10px;
+  }
+  

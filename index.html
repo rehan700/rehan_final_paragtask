@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>Password Strength Checker & Login Form</title>
+<style>
+  /* Add your CSS styles here */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+  <h1>Password Strength Checker</h1>
+  <form id="passwordStrengthForm">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <div id="passwordStrength" class="tooltip">
+      Password strength: <span id="strengthText">Weak</span>
+      <span class="tooltiptext">Password must be at least 8 characters long.</span>
+    </div>
+  </form>
+
+  <h1>Login Form</h1>
+  <form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <label for="loginPassword">Password:</label>
+    <input type="password" id="loginPassword" name="loginPassword" required>
+    <button type="submit">Login</button>
+  </form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const passwordInput = document.getElementById("password");
+    const strengthText = document.getElementById("strengthText");
+    const tooltip = document.querySelector(".tooltip");
+    const loginForm = document.getElementById("loginForm");
+    const loginPasswordInput = document.getElementById("loginPassword");
+
+    passwordInput.addEventListener("input", () => {
+      const password = passwordInput.value;
+      const strength = calculatePasswordStrength(password);
+      strengthText.textContent = strength;
+      tooltip.style.visibility = "visible";
+
+      // If password is strong, fill the login form password field
+      if (strength === "Strong") {
+        loginPasswordInput.value = password;
+      }
+    });
+
+    passwordInput.addEventListener("blur", () => {
+      tooltip.style.visibility = "hidden";
+    });
+
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const loginPassword = loginPasswordInput.value;
+      const passwordStrength = calculatePasswordStrength(loginPassword);
+
+      if (passwordStrength === "Strong") {
+        const loginSuccessful = await performLogin(loginPassword);
+        if (loginSuccessful) {
+          alert("Login successful!");
+        } else {
+          alert("Login failed. Invalid credentials.");
+        }
+      } else {
+        alert("Login failed. Password is weak.");
+      }
+    });
+
+    function calculatePasswordStrength(password) {
+      return password.length >= 8 ? "Strong" : "Weak";
+    }
+
+    async function performLogin(password) {
+      try {
+        // Simulating a successful login
+        return true;
+      } catch (error) {
+        console.error("Error performing login:", error);
+        return false;
+      }
+    }
+  });
+</script>
+</body>
+</html>

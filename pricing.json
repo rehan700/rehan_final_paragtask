@@ -1,0 +1,68 @@
+{
+    "Basic": {
+        "features": {
+            "feature1": {
+                "value": "Sample Text Here",
+                "available": "Yes"
+            },
+            "feature2": {
+                "value": "Sample Text Here",
+                "available": "No"
+            },
+            "feature3": {
+                "value": "Sample Text Here",
+                "available": "No"
+            },
+            "feature4": {
+                "value": "Sample Text Here",
+                "available": "Yes"
+            }
+        },
+        "price": "$2.99",
+        "name": "Basic"
+    },
+    "Standard": {
+        "features": {
+            "feature1": {
+                "value": "Sample Text Here",
+                "available": "No"
+            },
+            "feature2": {
+                "value": "Sample Text Here",
+                "available": "No"
+            },
+            "feature3": {
+                "value": "Sample Text Here",
+                "available": "No"
+            },
+            "feature4": {
+                "value": "Sample Text Here",
+                "available": "Yes"
+            }
+        },
+        "price": "$4.99",
+        "name": "Standard"
+    },
+    "Premium": {
+        "features": {
+            "feature1": {
+                "value": "Sample Text Here",
+                "available": "Yes"
+            },
+            "feature2": {
+                "value": "Sample Text Here",
+                "available": "Yes"
+            },
+            "feature3": {
+                "value": "Sample Text Here",
+                "available": "Yes"
+            },
+            "feature4": {
+                "value": "Sample Text Here",
+                "available": "Yes"
+            }
+        },
+        "price": "$6.99",
+        "name": "Premium"
+    }
+}
